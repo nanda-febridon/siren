@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+
+		<title>Login | Siren</title>
+		<link rel="shotrtcut icon" href="image/siren.png" />
+	</head>
+	<body>
+		<!-- login -->
+		<div class="continer mt-5 p-5 mx-auto border border-light rounded-3 shadow" style="width: 400px">
+			<form method="POST" action="account.html">
+				<div class="mb-4 text-center">
+					<img src="image/siren.png" alt="siren.png" style="width: 40px" />
+					<h1>SIREN</h1>
+				</div>
+				<div class="mb-3">
+					<input type="text" class="form-control" id="username" name="username" placeholder="username,or phone number" />
+				</div>
+				<div class="input-group mb-3">
+					<input class="form-control" type="password" id="password" name="password" placeholder="password" aria-label="Text input with checkbox" />
+					<div class="input-group-text">
+						<input class="form-check-input mt-0" type="checkbox" id="checkshow" value="" aria-label="Checkbox for following text input" onclick="showPassword()" title="show" />
+					</div>
+				</div>
+				<div class="text-center">
+					<button type="submit" class="btn btn-danger btn-sm form-control">Log In</button>
+					<a href="forgot.html" class="text-decoration-none" style="font-size: 12px">Forgot password?</a>
+				</div>
+			</form>
+		</div>
+		<div class="conainer text-center mt-3">
+			<p>Don't have an account? <a href="signup.html" class="text-decoration-none">Sign up</a></p>
+		</div>
+		<!-- end login -->
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+		<script>
+			function showPassword() {
+				var x = document.getElementById('password');
+				var y = document.getElementById('checkshow');
+				if (x.type === 'password') {
+					x.type = 'text';
+					y.title = 'Hide';
+				} else {
+					x.type = 'password';
+					y.title = 'Show';
+				}
+			}
+		</script>
+	</body>
+</html>
